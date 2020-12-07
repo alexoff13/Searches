@@ -5,9 +5,9 @@
 #ifndef BINARYINTERPOLATIONSEARCHES_LIBSEARCHES_H
 #define BINARYINTERPOLATIONSEARCHES_LIBSEARCHES_H
 
-int BinarySearch(int a[],int leng, int searchKey );
+int BinarySearch(const char* a,int leng, char searchKey );
 
-int InterpolationSearch(const int a[],int leng, int key );
+int InterpolationSearch(const char* a,int leng, char key );
 
 
 #endif //BINARYINTERPOLATIONSEARCHES_LIBSEARCHES_H

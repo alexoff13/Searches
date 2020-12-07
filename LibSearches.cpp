@@ -2,7 +2,7 @@
 // Created by Machine on 26.10.2020.
 //
 #include "LibSearches.h"
-int BinarySearch(int a[],int leng, int searchKey ) {
+int BinarySearch(const char* a,int leng, char searchKey ) {
     int midd = 0;
     int left = 0;
     int right = leng - 1;
@@ -20,7 +20,7 @@ int BinarySearch(int a[],int leng, int searchKey ) {
             return -1;
     }
 }
-    int InterpolationSearch(const int a[],int leng, int key ){
+    int InterpolationSearch(const char* a,int leng, char key ){
         int low = 0;
         int high = leng - 1;
         int mid;
