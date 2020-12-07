@@ -32,21 +32,24 @@ void GetDiagonal(char** matrix,int n){
 
     for(int k = -n+1; k < n; ++k)
     {
-        char* diagonal;
-        int sum = 0;
+        char* diagonal=new char[n];
+        int d = 0;
         for(int i = std::max(0,k), j = std::max(-k,0); j < std::min(n,n-k); i++, j++){
-           diagonal+= matrix[i][j];
+           diagonal[d]= matrix[i][j];
            cout<<matrix[i][j];
+           d++;
         }
-        cout<<"Введите ключ поиска:";
+        cout<<"\nВведите ключ поиска:";
         char key;
         cin>>key;
         cout<<"\n";
-        cout<<BinarySearch(diagonal,strlen(diagonal),key);
+        int findIndex=BinarySearch(diagonal,(int)strlen(diagonal),key);
+        cout<<findIndex;
         cout<<"Введите ключ поиска:";
         cin>>key;
         cout<<"\n";
-        cout<<InterpolationSearch(diagonal,strlen(diagonal),key);
+        findIndex=InterpolationSearch(diagonal,strlen(diagonal),key);
+        cout<<findIndex;
         cout<<"\n";
 
     }
